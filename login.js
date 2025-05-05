@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- بيانات الاعتماد (يمكن تغييرها هنا) ---
     const correctUsername = "admin";
-    const correctPassword = "admin";
+    const correctPassword = "123123123";
     // ----------------------------------------
 
     loginForm.addEventListener("submit", (event) => {
