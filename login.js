@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "admin": "dolaxp",
         "dolaxp": "123123123",
         "manga": "123123123",
+        "Abdo1994": "0567014549",
         "taleb": "123123123"
     };
     // -------------------------------------------
