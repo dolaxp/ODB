@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "dolaxp": "123123123",
         "manga": "123123123",
         "Abdo1994": "0567014549",
+        "Atta": "091991",
         "taleb": "123123123"
     };
     // -------------------------------------------
