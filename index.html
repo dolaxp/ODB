@@ -1,3 +1,40 @@
+
+كيفية إضافة نافذة منبثقة وتعطيل حقول تسجيل الدخول
+اريد ظهور نافذة منبثقة فى هذة الصفحه 
+بجمله 
+نواجه بعض المشاكل حاليا وجاري العمل علي حلها 
+
+وايضاً اقفال بيانات تسجيل الدخول حيث لا يقدر المتسخدم كتابه اليوزر والباسورد فى خانه الدخول
+index.html
+Code · 4.15 KB
+لقد تلقيت طلبك لعرض نافذة منبثقة (popup) على الصفحة التي أرسلتها، مع رسالة تفيد بوجود مشاكل قيد الحل، بالإضافة إلى تعطيل حقول إدخال اسم المستخدم وكلمة المرور في نموذج تسجيل الدخول. سأبدأ الآن في تحليل ملف HTML الذي قمت بتحميله وتنفيذ التعديلات المطلوبة باستخدام JavaScript وCSS.
+I reviewed the HTML file, added a modal popup with a maintenance message, and disabled login fields by setting their inputs as disabled. Next, I'll finalize the changes for delivery.
+
+Having examined the current HTML, I confirmed that the modal message is added and login fields are disabled. Next, I will finalize and prepare the file for delivery.
+
+Speed
+تم تعديل ملف index.html بنجاح. تم إضافة نافذة منبثقة تحتوي على رسالة "نواجه بعض المشاكل حاليا وجاري العمل علي حلها" وتم تعطيل حقلي اسم المستخدم وكلمة المرور.
+index.html
+Code · 5.39 KB
+
+View all files in this task
+ايضاً ايقونة تواصل مع مطور التطبيق 
+https://wa.me/saudifiber
+I added a fixed WhatsApp contact icon at the bottom-left corner, linking to the specified number, next to the existing modal and disabled login fields, completing the modification.
+
+I have added the WhatsApp contact icon to the page, completing the modification. Next, I'll review the HTML to ensure the integration is correct before delivering the final version.
+
+Speed
+تم تعديل ملف index.html بنجاح. تم إضافة أيقونة الواتساب للتواصل مع مطور التطبيق في الزاوية السفلية اليسرى من الصفحة.
+index.html
+Code · 6.23 KB
+
+View all files in this task
+Task completed
+How was this result?
+Suggested follow-ups
+Send message to Manus
+index.html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -83,6 +120,37 @@
             font-weight: 500;
             min-height: 1.2em; /* Prevent layout shift */
         }
+
+        /* Popup styles */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            color: #333;
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
+        .popup-content h2 {
+            color: var(--primary-color, #0a3d62);
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
@@ -94,11 +162,11 @@
         <form id="loginForm">
             <div class="input-group">
                 <label for="username">اسم المستخدم:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" required disabled>
             </div>
             <div class="input-group">
                 <label for="password">كلمة المرور:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" required disabled>
             </div>
             <div id="loginError"></div>
             <button type="submit" id="loginButton">دخول</button>
@@ -106,5 +174,19 @@
     </div>
 
     <script src="login.js"></script>
+
+    <div class="popup-overlay" id="maintenancePopup">
+        <div class="popup-content">
+            <h2>إشعار هام</h2>
+            <p>نواجه بعض المشاكل حاليا وجاري العمل علي حلها.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('maintenancePopup').style.display = 'flex';
+        });
+    </script>
 </body>
 </html>
+كيفية إضافة نافذة منبثقة وتعطيل حقول تسجيل الدخول - Manus
