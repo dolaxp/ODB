@@ -83,37 +83,6 @@
             font-weight: 500;
             min-height: 1.2em; /* Prevent layout shift */
         }
-
-        /* Popup styles */
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .popup-content {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            max-width: 400px;
-            color: #333;
-            font-size: 1.2em;
-            line-height: 1.5;
-        }
-
-        .popup-content h2 {
-            color: var(--primary-color, #0a3d62);
-            margin-bottom: 15px;
-        }
     </style>
 </head>
 <body>
@@ -125,11 +94,11 @@
         <form id="loginForm">
             <div class="input-group">
                 <label for="username">اسم المستخدم:</label>
-                <input type="text" id="username" name="username" required disabled>
+                <input type="text" id="username" name="username" required>
             </div>
             <div class="input-group">
                 <label for="password">كلمة المرور:</label>
-                <input type="password" id="password" name="password" required disabled>
+                <input type="password" id="password" name="password" required>
             </div>
             <div id="loginError"></div>
             <button type="submit" id="loginButton">دخول</button>
@@ -137,21 +106,5 @@
     </div>
 
     <script src="login.js"></script>
-
-    <div class="popup-overlay" id="maintenancePopup">
-        <div class="popup-content">
-            <h2>إشعار هام</h2>
-            <p>الزملاء الأعزاء،<br>
-            أشكركم على استخدامكم للتطبيق خلال الفترة الماضية، ويسعدني أنه ساعد الجميع فى العمل.<br>
-            لكن نظراً لتحمل التطبيق تكاليف تشغيل واستضافة شهرية وعدم توفر جهة داعمة يصعب الاستمرار بها حالياً، أعتذر منكم عن إيقاف الخدمة خلال الفترة القادمة.<br>
-            شكرًا لتفهمكم .</p>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('maintenancePopup').style.display = 'flex';
-        });
-    </script>
 </body>
 </html>
