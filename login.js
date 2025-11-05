@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "manga": "123123123",
         "Abdo1994": "0567014549",
         "Atta": "091991",
+        "sadek": "123123123",
         "3rgany": "123123123",
         "taleb": "123123123",
         "3asem": "123123123",
