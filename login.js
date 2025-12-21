@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "3rgany": "123123123",
         "taleb": "123123123",
         "3asem": "123123123",
+        "omarxx": "123123123",
     };
     // -------------------------------------------
 
