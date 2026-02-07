@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- بيانات الاعتماد (مستخدمين متعددين) ---
     const users = {
         "admin": "admin",
-        "khaled": "123123123",
+        "Kapo": "123123123",
         "manga": "123123123",
         "Abdo1994": "0567014549",
         "AlFursan": "123123123",
